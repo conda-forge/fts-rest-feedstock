@@ -1,5 +1,5 @@
 {% set name = "fts-rest" %}
-{% set version = "3.9.2" %}
+{% set version = "3.9.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://gitlab.cern.ch/fts/fts-rest/-/archive/v{{ version }}/fts-rest-v{{ version }}.tar.gz
-  sha256: 76a202e7f4289ea86ba58a916762c1cbde39792a31be5893c20b99f5d757e1dd
+  sha256: fbe8ed153c8a23222f29e531346330b1617265ee5e18242fcaa02e46b20cfa5c
 
 build:
   noarch: python
