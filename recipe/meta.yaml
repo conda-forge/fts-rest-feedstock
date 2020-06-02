@@ -1,5 +1,5 @@
 {% set name = "fts-rest" %}
-{% set version = "3.9.3" %}
+{% set version = "3.9.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://gitlab.cern.ch/fts/fts-rest/-/archive/v{{ version }}/fts-rest-v{{ version }}.tar.gz
-  sha256: fbe8ed153c8a23222f29e531346330b1617265ee5e18242fcaa02e46b20cfa5c
+  sha256: f008f7e57ea0ed22e8ac292482069fb271ef3f747abbc58709f4da4cf956060f
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -40,7 +40,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
-  summary: 'File Transfer Service REST API'
+  summary: File Transfer Service REST API
   doc_url: http://fts3-docs.web.cern.ch/fts3-docs/fts-rest/docs/easy/index.html
   dev_url: https://gitlab.cern.ch/fts/fts-rest/
 
