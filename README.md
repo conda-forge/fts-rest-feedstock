@@ -5,11 +5,13 @@ Home: https://fts.web.cern.ch/
 
 Package license: Apache-2.0
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/fts-rest-feedstock/blob/master/LICENSE.txt)
 
 Summary: File Transfer Service REST API
 
+Development: https://gitlab.cern.ch/fts/fts-rest/
 
+Documentation: http://fts3-docs.web.cern.ch/fts3-docs/fts-rest/docs/easy/index.html
 
 Current build status
 ====================
