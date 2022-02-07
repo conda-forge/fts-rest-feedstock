@@ -1,5 +1,5 @@
-About fts-rest
-==============
+About fts3
+==========
 
 Home: https://fts.web.cern.ch/
 
@@ -9,9 +9,9 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/fts-rest-feedst
 
 Summary: File Transfer Service REST API
 
-Development: https://gitlab.cern.ch/fts/fts-rest/
+Development: https://gitlab.cern.ch/fts/fts-rest-flask
 
-Documentation: http://fts3-docs.web.cern.ch/fts3-docs/fts-rest/docs/easy/index.html
+Documentation: https://fts3-docs.web.cern.ch/
 
 Current build status
 ====================
@@ -31,28 +31,28 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-fts--rest-green.svg)](https://anaconda.org/conda-forge/fts-rest) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/fts-rest.svg)](https://anaconda.org/conda-forge/fts-rest) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/fts-rest.svg)](https://anaconda.org/conda-forge/fts-rest) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/fts-rest.svg)](https://anaconda.org/conda-forge/fts-rest) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-fts3-green.svg)](https://anaconda.org/conda-forge/fts3) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/fts3.svg)](https://anaconda.org/conda-forge/fts3) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/fts3.svg)](https://anaconda.org/conda-forge/fts3) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/fts3.svg)](https://anaconda.org/conda-forge/fts3) |
 
-Installing fts-rest
-===================
+Installing fts3
+===============
 
-Installing `fts-rest` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `fts3` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
 conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `fts-rest` can be installed with:
+Once the `conda-forge` channel has been enabled, `fts3` can be installed with:
 
 ```
-conda install fts-rest
+conda install fts3
 ```
 
-It is possible to list all of the versions of `fts-rest` available on your platform with:
+It is possible to list all of the versions of `fts3` available on your platform with:
 
 ```
-conda search fts-rest --channel conda-forge
+conda search fts3 --channel conda-forge
 ```
 
 
@@ -95,17 +95,17 @@ Terminology
                   produce the finished article (built conda distributions)
 
 
-Updating fts-rest-feedstock
-===========================
+Updating fts3-feedstock
+=======================
 
-If you would like to improve the fts-rest recipe or build a new
+If you would like to improve the fts3 recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `conda-forge` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `conda-forge` channel.
-Note that all branches in the conda-forge/fts-rest-feedstock are
+Note that all branches in the conda-forge/fts3-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks and branches in the main repository should only be used to
 build distinct package versions.

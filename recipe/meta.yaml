@@ -1,48 +1,56 @@
-{% set name = "fts-rest" %}
-{% set version = "3.11.1" %}
+{% set name = "fts3" %}
+{% set version = "3.12.0" %}
+
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://gitlab.cern.ch/fts/fts-rest/-/archive/v{{ version }}/fts-rest-v{{ version }}.tar.gz
-  sha256: 61003b662082bb3e61d56b4d54d773a4881543229a121e7f1a614596d1f06424
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fts3-{{ version }}.tar.gz
+  sha256: dba48f0a25ea6daf14ba92d72e8b5a1d97f79cce7a47bdcc55480305a02e6e8a
 
 build:
-  noarch: python
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python <3
     - pip
+    - python >=3.7
   run:
-    - python <3
-    - pycurl
-    - m2crypto >=0.16
-    - requests
-    - sqlalchemy
-    - setuptools
+    - m2crypto
+    - python >=3.7
+    - requests >=2.20
+    - setuptools >=42
 
 test:
   imports:
     - fts3
     - fts3.cli
-    - fts3.model
-    - fts3.rest
-    - fts3.rest.client
-    - fts3.rest.client.easy
+  commands:
+    - pip check
+    - fts-rest-ban --help
+    - fts-rest-delegate --help
+    - fts-rest-delete-submit --help
+    - fts-rest-server-status --help
+    - fts-rest-transfer-cancel --help
+    - fts-rest-transfer-list --help
+    - fts-rest-transfer-status --help
+    - fts-rest-transfer-submit --help
+    - fts-rest-whoami --help
+  requires:
+    - pip
 
 about:
   home: https://fts.web.cern.ch/
+  summary: FTS Python3 CLI and libraries
   license: Apache-2.0
-  license_family: Apache
   license_file: LICENSE
   summary: File Transfer Service REST API
-  doc_url: http://fts3-docs.web.cern.ch/fts3-docs/fts-rest/docs/easy/index.html
-  dev_url: https://gitlab.cern.ch/fts/fts-rest/
+  doc_url: https://fts3-docs.web.cern.ch/
+  dev_url: https://gitlab.cern.ch/fts/fts-rest-flask
 
 extra:
   recipe-maintainers:
