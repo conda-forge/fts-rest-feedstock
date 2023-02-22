@@ -9,9 +9,11 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fts3-{{ version }}.tar.gz
   sha256: dba48f0a25ea6daf14ba92d72e8b5a1d97f79cce7a47bdcc55480305a02e6e8a
+  patches:
+    - openssl3.patch
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
