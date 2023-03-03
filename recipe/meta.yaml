@@ -1,5 +1,5 @@
 {% set name = "fts3" %}
-{% set version = "3.12.0" %}
+{% set version = "3.12.2" %}
 
 
 package:
@@ -8,12 +8,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fts3-{{ version }}.tar.gz
-  sha256: dba48f0a25ea6daf14ba92d72e8b5a1d97f79cce7a47bdcc55480305a02e6e8a
-  patches:
-    - openssl3.patch
+  sha256: fc9175c10ddd7a98251e42c0d68d43c717330d1566dac265c09c691dae5ccb82
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -50,7 +48,6 @@ about:
   summary: FTS Python3 CLI and libraries
   license: Apache-2.0
   license_file: LICENSE
-  summary: File Transfer Service REST API
   doc_url: https://fts3-docs.web.cern.ch/
   dev_url: https://gitlab.cern.ch/fts/fts-rest-flask
 
