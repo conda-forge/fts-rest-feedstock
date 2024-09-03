@@ -1,5 +1,5 @@
 {% set name = "fts3" %}
-{% set version = "3.13.1" %}
+{% set version = "3.13.4" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fts3-{{ version }}.tar.gz
-  sha256: fcc8979b02a5c6689bddca92d153a665dafab76696f65606ab2882f25c653ac9
+  sha256: 9d3f19b35a673df300eedcfde98ba31bdae22ef74be15bd4a17d45f569f9364d
 
 build:
   number: 0
