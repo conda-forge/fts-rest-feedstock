@@ -7,21 +7,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fts3-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fts3-{{ version }}.tar.gz
   sha256: 9d3f19b35a673df300eedcfde98ba31bdae22ef74be15bd4a17d45f569f9364d
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
   run:
     - m2crypto
-    - python >=3.7
+    - python >={{ python_min }}
     - requests >=2.20
     - setuptools >=42
 
@@ -42,6 +42,7 @@ test:
     - fts-rest-whoami --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://fts.web.cern.ch/
